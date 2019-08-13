@@ -144,6 +144,15 @@ function articlePara3(thirdParagraph){
 }
 // console.log(articlePara3());
 
+// Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+
+function expandButton(){
+  const expandButton = document.createElement('span');
+  expandButton.classList.add('expandButton');
+
+  return expandButton;
+}
+
 console.log(expandButton());
 
 // Step 3: return the entire component.
@@ -151,30 +160,21 @@ console.log(expandButton());
 function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph){
   const newArticle = document.createElement('section')
     newArticle.classList.add('article')
-    newArticle.appendChild(expandButton());
+    
     newArticle.appendChild(articleH2(title));
     newArticle.appendChild(articleDate(date));
     newArticle.appendChild(articlePara1(firstParagraph));
     newArticle.appendChild(articlePara2(secondParagraph));
     newArticle.appendChild(articlePara3(thirdParagraph));
+    
+    newArticle.appendChild(expandButton());
+    newArticle.addEventListener('click', e => e.currentTarget.classList.toggle('article-open'));
+    newArticle.addEventListener('toggle', expandButton);
 
   return newArticle;
 }
 
 console.log(createArticle());
-
-// Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
-
-function expandButton(){
-  const expandButton = document.createElement('span');
-  expandButton.classList.add('expandButton');
-  expandButton.textContent = 'Expand';
-
-  newArticle.addEventListener('click', event => {
-    event.target.classList.toggle('article-open')});
-
-  return expandButton;
-}
 
 const body = document.querySelector('body');
 
