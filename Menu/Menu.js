@@ -18,13 +18,22 @@ let menuItems = [
   //   </ul>
   // </div>
 
-  function createMenu(){
+  function createMenu(array){
     const menu = document.createElement('div');
+    const menuUl = document.createElement('ul');
     menu.classList.add('menu');
+  
+    for (i = 0; i < array.length; i++){
+      const menuLi = document.createElement('li');
+      menuLi.textContent = array[i];
+      menuUl.appendChild(menuLi);
+    }
+
+    menu.appendChild(menuUl);
     return menu;
   }
 
-  console.log(createMenu());
+  console.log(createMenu(menuItems));
 
   // Pass the function an array as it's only argument.
 
