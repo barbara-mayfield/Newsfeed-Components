@@ -17,29 +17,21 @@ let menuItems = [
   //     {each menu item as a list item}
   //   </ul>
   // </div>  
-
-
-  function toggleMenu(){
-  const menuButton = document.querySelector('.menu-button')
-  menuButton.addEventListener('click', e => e.currentTarget.classList.toggle('menu--open'));
-    return menuButton;
-}
-
-  console.log(toggleMenu());
   
   function createMenu(array){
+    const menuButton = document.querySelector('.menu-button')
     const menu = document.createElement('div');
     const menuUl = document.createElement('ul');
     menu.classList.add('menu');
+    menuButton.appendChild(menu);
     menu.appendChild(menuUl);
-    // menu.addEventListener('toggle', toggleMenu);
+    menuButton.addEventListener('click', e => {e.target.classList.toggle('menu--open')});
     
     for (i = 0; i < array.length; i++){
       const menuLi = document.createElement('li');
       menuLi.textContent = array[i];
       menuUl.appendChild(menuLi);
     }
-    
     
     return menu;
   }
