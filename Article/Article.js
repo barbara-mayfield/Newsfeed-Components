@@ -146,30 +146,29 @@ function articlePara3(thirdParagraph){
 
 // Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
-function expand(){
+function expandButton(){
   const expandButton = document.createElement('span');
   expandButton.classList.add('expandButton');
 
-  expandButton.onclick = e => {
-    e.currentTarget.classList.toggle('article-open');
-  }
+  expandButton.addEventListener('click', event => {
+    event.target.classList.toggle('article-open')});
 
   return expandButton;
 }
 
-console.log(expand());
+console.log(expandButton());
 
 // Step 3: return the entire component.
 
 function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph){
   const newArticle = document.createElement('section')
     newArticle.classList.add('article')
+    newArticle.appendChild(expandButton());
     newArticle.appendChild(articleH2(title));
     newArticle.appendChild(articleDate(date));
     newArticle.appendChild(articlePara1(firstParagraph));
     newArticle.appendChild(articlePara2(secondParagraph));
     newArticle.appendChild(articlePara3(thirdParagraph));
-    newArticle.appendChild(expand());
 
   return newArticle;
 }
@@ -185,7 +184,7 @@ data.forEach((newArticle) => {
 // Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
 const dataComponents = data.map((data) => {
-  return createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph);
+  return createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph, expandButton());
 })
 
   // Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
