@@ -88,6 +88,34 @@ const data = [
   }
 ];
 
+data.push({
+  title: 'Big Brain Tech Company',
+  date: 'Aug 13, 2019',
+  firstParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin, nunc vel interdum ultrices, justo erat 
+  placerat sem, quis sagittis neque urna sed risus. Nullam ut imperdiet arcu. Sed vitae urna eget nisl tempor euismod in vitae quam. 
+  Nulla quis ornare odio, eget tincidunt tortor. Vivamus aliquam turpis sit amet mi porta, ac convallis mi posuere. Vestibulum eu cursus sem. 
+  Aliquam quis fringilla sem. Aliquam fermentum ex eu turpis posuere ornare. Nam quis metus molestie, aliquam justo et, ultricies erat. 
+  Nunc ut justo ullamcorper, feugiat sem in, sagittis nulla. Sed in iaculis libero, iaculis tempus neque. Maecenas at neque consectetur, 
+  facilisis justo ut, ultricies leo. Aenean luctus quis nibh vel ultrices. In posuere, nibh eget iaculis accumsan, diam nisi venenatis felis,
+   at lobortis urna odio ullamcorper erat. Sed id odio quis lectus scelerisque mattis quis id ante. Donec tincidunt felis tellus, in pellentesque 
+   turpis tincidunt vitae.`,
+
+  secondParagraph: `Proin sed nulla dignissim, aliquam magna id, finibus tortor. Quisque felis leo, sollicitudin ac ullamcorper eget, 
+  ultrices eget quam. Sed viverra consectetur vestibulum. Nullam et orci pulvinar, lobortis metus fermentum, tincidunt lorem. Donec dignissim ut 
+  neque blandit sagittis. Sed non purus a arcu scelerisque pulvinar. Nullam porttitor, orci ac dignissim blandit, augue diam consectetur ipsum, 
+  nec sodales tortor quam at magna. Cras vel odio eget sem venenatis tincidunt. Curabitur in volutpat purus, vitae gravida turpis. Aenean porttitor 
+  euismod urna, sit amet pellentesque massa commodo at. Sed ac nisi faucibus nisl pulvinar sagittis. Nullam velit massa, sagittis ut odio suscipit, 
+  vulputate sodales ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse sagittis ex eget 
+  arcu feugiat commodo. Curabitur volutpat pretium mollis. Integer aliquet tortor ex, ac iaculis odio facilisis a.`,
+
+  thirdParagraph: `Duis vel varius arcu, ac congue ligula. Sed luctus ac tortor interdum mattis. Proin sed pharetra nisi, sit amet ultricies neque.
+   Maecenas vel massa sit amet tortor volutpat vestibulum. Ut sollicitudin ligula turpis, non commodo ex porttitor eu. Nunc ut risus eget orci pharetra
+    blandit id at elit. In ultrices neque vitae eros lacinia, quis elementum risus suscipit. Sed iaculis et elit vel interdum. Duis venenatis feugiat 
+    libero, sit amet euismod justo blandit sed. Praesent velit leo, finibus quis ultrices vel, hendrerit in ligula.`
+  });
+
+  console.log(data);
+
 // Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
 //   <div class="article">
@@ -189,4 +217,3 @@ const dataComponents = data.map((data) => {
 })
 
   // Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
-
